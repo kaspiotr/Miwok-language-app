@@ -30,9 +30,10 @@ public class NumbersActivity extends AppCompatActivity {
         words.add("nine");
         words.add("ten");
 
+        LinearLayout rootView = (LinearLayout) findViewById(R.id.rootView);
+
         int index = 0;
-        while(index < 10) {
-            LinearLayout rootView = (LinearLayout) findViewById(R.id.rootView);
+        while (index < words.size()) {
             TextView wordView = new TextView(this);
             wordView.setText(words.get(index));
             rootView.addView(wordView); //adding a child view wordView to parent view rootView
