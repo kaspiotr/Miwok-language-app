@@ -35,9 +35,9 @@ public class NumbersActivity extends AppCompatActivity {
 
         ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, words);
 
-        GridView gridView = (GridView) findViewById(R.id.gridView);
+        ListView listView = (ListView) findViewById(R.id.list);
 
-        gridView.setAdapter(itemsAdapter);
+        listView.setAdapter(itemsAdapter);
 
     }
 }
