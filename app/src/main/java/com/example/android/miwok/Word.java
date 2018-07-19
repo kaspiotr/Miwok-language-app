@@ -1,19 +1,41 @@
 package com.example.android.miwok;
 
 public class Word {
-    private String defaultTranslation;
-    private String miwokTranslation;
+    private String mDefaultTranslation;
+    private String mMiwokTranslation;
+    private int mImageResourceId = NO_IMAGE_PROVIDED;
 
-    public Word(String defaultTranslation, String miwokTranslation) {
-        this.defaultTranslation = defaultTranslation;
-        this.miwokTranslation = miwokTranslation;
+    private static final int NO_IMAGE_PROVIDED = -1;
+
+
+    public Word(String mDefaultTranslation, String mMiwokTranslation, int mImageResourceId) {
+        this.mDefaultTranslation = mDefaultTranslation;
+        this.mMiwokTranslation = mMiwokTranslation;
+        this.mImageResourceId = mImageResourceId;
     }
 
-    public String getDefaultTranslation() {
-        return defaultTranslation;
+    public Word(String mDefaultTranslation, String mMiwokTranslation) {
+        this.mDefaultTranslation = mDefaultTranslation;
+        this.mMiwokTranslation = mMiwokTranslation;
     }
 
-    public String getMiwokTranslation() {
-        return miwokTranslation;
+    public String getmDefaultTranslation() {
+        return mDefaultTranslation;
+    }
+
+    public String getmMiwokTranslation() {
+        return mMiwokTranslation;
+    }
+
+    public int getmImageResourceId() {
+        return mImageResourceId;
+    }
+
+    /**
+     * Return whether or not there is an image for this word.
+     * @return
+     */
+    public boolean hasImage() {
+        return mImageResourceId != NO_IMAGE_PROVIDED;
     }
 }
