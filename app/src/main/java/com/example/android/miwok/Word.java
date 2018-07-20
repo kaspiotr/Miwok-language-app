@@ -36,6 +36,7 @@ public class Word {
 
     /**
      * Return whether or not there is an image for this word.
+     *
      * @return
      */
     public boolean hasImage() {
@@ -44,5 +45,15 @@ public class Word {
 
     public int getmAudioResourceId() {
         return mAudioResourceId;
+    }
+
+    @Override
+    public String toString() {
+        return "Word{" +
+                "mDefaultTranslation='" + mDefaultTranslation + '\'' +
+                ", mMiwokTranslation='" + mMiwokTranslation + '\'' +
+                ", mAudioResourceId=" + mAudioResourceId +
+                ", mImageResourceId=" + mImageResourceId +
+                '}';
     }
 }
