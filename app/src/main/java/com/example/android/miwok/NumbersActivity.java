@@ -22,13 +22,13 @@ public class NumbersActivity extends AppCompatActivity {
             new AudioManager.OnAudioFocusChangeListener() {
                 @Override
                 public void onAudioFocusChange(int focusChange) {
-                    if(focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT || focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK) {
+                    if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT || focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK) {
                         mediaPlayer.pause();
                         mediaPlayer.seekTo(0);
-                    } else if(focusChange == AudioManager.AUDIOFOCUS_GAIN) {
+                    } else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
                         // Resume playback
                         mediaPlayer.start();
-                    } else if(focusChange == AudioManager.AUDIOFOCUS_LOSS) {
+                    } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
                         releaseMediaPlayer();
                     }
                 }
@@ -95,7 +95,6 @@ public class NumbersActivity extends AppCompatActivity {
                 }
             }
         });
-
 
 
     }
